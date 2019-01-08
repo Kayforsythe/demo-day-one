@@ -9,13 +9,13 @@ var router = new Navigo(window.location.origin);
 var State = {
     'active': 'Home',
     'Home': {
-        'links': [ 'Insta', 'Email', 'Twitter', 'Purchase Here', 'aboutMe', 'Editorial' ]
+        'links': [ 'Creative Content', 'Editorial', 'Forum' ]
     },
     'aboutMe': {
-        'links': [ 'Insta', 'Email', 'Twitter', 'Purchase Here', 'Editorial' ]
+        'links': [ 'Creative Content', 'EDitorial', 'Forum' ]
     },
     'Editorial': {
-        'links': [ 'Insta', 'Email', 'Twitter', 'Purchase Here', 'aboutMe' ]
+        'links': [ 'Creative Content', 'Editorial', 'Forum' ]
     },
 
 };
@@ -29,8 +29,8 @@ function render(state){
         ${Content(state)}
         ${Footer(state)}
     `;
-
-    router.UpdatePageLinks();
+    
+    //router.UpdatePageLinks();
 }
 
 function handleNavigation(params){

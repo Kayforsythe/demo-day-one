@@ -4,7 +4,7 @@ html{
     padding: 0;
 }
 
-body{
+#root{
     display: grid;
     grid-template-rows: min-content min-content auto min-content;
     grid-template-areas:
@@ -14,38 +14,30 @@ body{
     "footer";
     margin: 0;
     padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
     min-height: 100vh;
-    font-family: 'Great Vibes', cursive;
-    background-color: rgba(172, 155, 119, 0.678);
+    font-family: 'The Girl Next Door', cursive;
+    background-color: rgba(235, 199, 152, 0.774);
 }
 
-#contact ul {
-    display: inline-flex;
-    top: 0;
-    left: 0;
-    align-content: space-between;
-    justify-content: flex-start;
-    list-style: none;
-    font-size: 20px;
-}
 a {
     text-decoration: none;
-    color: rgba(59, 16, 16, 0.781);
+    color: rgb(141, 14, 14);
 }
+
 
 #navigation{
     grid-area: navigation;
-    display: block;
-    font-size: 25px;
-    list-style: none;
+      
+}
+
+#navigation ul{
+    display: inline;
 }
 
 #navigation li {
-    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    display: inline-flex;
+    list-style: none;
 
 }
 
@@ -56,47 +48,7 @@ a {
 
 #content {  
     grid-area: content;
-    letter-spacing: 2px;
-}
-
-.quote {
-    text-align:  center;
-    padding-top: 25px;
-}
-
-.parallax{
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-    padding: 25% 10%;
-    box-sizing: border-box;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit; 
-}   
-
-.parallax:before {
-    content: "";
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
-}
     
-.parallax, .parallax:before {
-    background-size: 100% 97%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-#wrapper {
-    background-image: url("https://i.pinimg.com/originals/f6/4f/e7/f64fe787470bab6b03a309e90b768012.jpg");
-}
-
-#wrapper1{
-    background-image: url("https://lh3.googleusercontent.com/nqyRfbI07MHB3YRK0ztR7UK6BV75La8BGExJJgGzuqW8o1QTGSeaXxjtCljyYI06TIh5aCX_wA11IXwhEZrt2TCyWiKjkZhE1OAcnAL8TE8G8pt_dCXn7daiW5nTkuo4_nXUF0XYag7dc3TH341bHCrBlSUO3HPr_olPFI_Ob7Z0eshTTfRwUkRsoxJKUc3lGcOCiZgOXofruH6RBrOwVU8XYQsjCm6GPSFHryDFSIn3W2IinUfefUINs8R6yMmg2ftYPB-zcd5dej04SQolmGVI2tGzHoskfGEvZL9e7pDXcLMT1t3lXN09KIXrrcRJowbmmhcRbyfNxuxYOH91ldgTGo70pLTcUtAqXW-1_oB0UP1qw-DMNIyweokTJgmVaWsVV8PfQENjQAt3_stwWM66rEu3eTjIocQqUe3f96UBrg_83bHOGATcWjK4BBTx0gr6is9vHg8VTM12qaEb1anUhR9puadRszuY8_uUm_I-cfN1BbzE0e9EWO2fLuclPaI__bEiwCCqji-OPTzATe2DLrmWRWgn2A6bFzNcjZvSn4BRbxhxzf3rmAG9z_BIGlA5uNNWTEp4-6nopRBXJZwBaUuIdfX2-eBvetF3lP34oEGXfRJjtHzpKys44ccEb_AZ54RxyBFbqEn_3FA3Mqv4rA=w1027-h608-no");
 }
 
 .poemOne{
@@ -109,7 +61,7 @@ a {
 
 #footer{
     grid-area: footer; 
-    font-family: 'Indie Flower', cursive;
+    position: fixed;
     padding: 10px;
 }
 
@@ -123,20 +75,22 @@ a {
     
 }
 
-/* .intro {
-    color: cornflowerblue;
-    font-family: 'Coming Soon', cursive;
+.intro {
+    color:rgb(88, 42, 34);
     font-size: 20px;
-    top: 0;
-    left: 10px;
-}*/
-
-.pages ul{
-    display: block;
-    list-style: none;
+    letter-spacing: 1px;
+    margin: 10px;
+    
 }
 
-.edit{
+
+.pages ul{
+    display: inline;
+    list-style: none;
+
+}
+
+.edit {
     margin: 0;
     padding: 0;
     color: blanchedalmond;

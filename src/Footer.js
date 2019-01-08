@@ -1,6 +1,6 @@
 export default function(state){
     return`
-
+<div id = "footer">
     <ul>
     <li>
         <i class="fab fa-instagram">
@@ -24,5 +24,6 @@ export default function(state){
 
     </li>
 </ul>
+</div>
     `;
 }

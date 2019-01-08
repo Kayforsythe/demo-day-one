@@ -113,7 +113,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default(state) {
-  return "\n<div id=\"contact\">\n<ul>\n    <li>\n        <i class=\"fab fa-instagram\">\n            <a href=\"https://www.instagram.com/semianonymouspoet/?hl=en\"> Insta </a> </i>\n    </li>\n    <li>\n        <i class=\"fas fa-at\">\n            <a href=\"\"> Email </a></i>\n    </li>\n    <li>\n        <i class=\"fab fa-twitter\">\n            <a href=\"\"> Twitter </a></i>\n    </li>\n    <li>\n        <i class=\"fas fa-bullseye\">\n            <a href=\"\"> Purchase here </a></i>\n    </li>\n</ul>\n</div>\n    <div id=\"wrapper\" class=\"parallax\">\n                <div class=\"quote\">\n                    <a href=\"\">\n                        <h2>\"And I knew exactly what to do. But in a much more real sense,\n                            I had no idea what to do.\"\n                    </a></h2>\n                    <h3>- Michael Scott</h3>\n                </div>\n";
+  return "\n<div id=\"navigation\">\n<ul>\n    <li>\n         <a href=\"\">Creative Content</a> </i>\n    </li>\n    <li>\n        \n            <a href=\"\"> Editorial </a></i>\n    </li>\n    <li>\n            <a href=\"\"> Forum </a></i>\n    </li>\n    \n</ul>\n</div>\n    \n";
 }
 },{}],"src/Header.js":[function(require,module,exports) {
 "use strict";
@@ -124,9 +124,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default(state) {
-  return "\n    <h1>Jessica Anne</h1>\n    ";
+  return "\n   \n    ";
 }
-},{}],"src/Content.js":[function(require,module,exports) {
+},{}],"src/Screens/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -135,9 +135,59 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default(state) {
-  return "\n    <div id=\"wrapper1\" class=\"parallax\">\n    <a href=\"./aboutMe/index.html\"><h2>Pieces of Me</h2></a>\n    \n            <a href=\"./Editorial/index.html\">\n            <h2>Jess is Here to quickly and easily provide her services to you.</h2></a>\n<p>Whether you need a paper peer reviewed, document edited, \nor just help with wording!</p>\n<p>There are no favor too big or too small!</p>\n<p>Aside from her passion for poetry, Jess is studying \n[major here] at St. Charles Community College. </p>\n<p>You can typically catch her at Picasso's on Thursday nights ejoying Open\nMic night, or playing at the dog park with her yorkie Teddy!</p>\n    </div>\n    ";
+  return "\n    <div class=\"intro\">\n    <h1>\"To write is human, to edit is devine\"</h1>\n    <h2>-Stephen King</h2>\n    ";
 }
-},{}],"src/Footer.js":[function(require,module,exports) {
+},{}],"src/Screens/Editorial.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Editorial;
+
+function Editorial(state) {
+  return "\n\n<section class=\"edit\">\n\n<div id=\"header\" class=\"open\">\n\n<img src=\"https://lh3.googleusercontent.com/yb5F5Jb1boFa013ZLSB-q3qg9GBg83g3291vrCT6hgerUn8EwivgP0U7ZdoBSoHpvCpFdIhY7eRwPREynWRPGM3nyUqDliV_sDOxwys0RFzzV1QCJqbw9c9IYnsySmy1eQqV7MNVjCPYLCd3kd9-ZP6B0SpaDO8bWPxuH43G1Liqaq6_n2st5VsFdkPhf0GEhVwCcDAfbSVB6QtIiWKbJAR54B6t0I6ZzUBdnPTSraH7z7J8jrAu-_iQ7B7LczwR5mi9dBToBwgo3hxSOvrWLjg336z6hl6OxsB2Dc3aM441nGjcOMnfKCnKENOC0KyS2iWl1NhQLe2t37KboEnK0KhU6Jt_KB1wVJj-RVbnqQ55VcZpiEAimNnmAGqfksLjKt7ln_A_xQrvtzzOshUgVcFoCymIXv-2CS-u_q28oKzdEuNqvEbs9MKT63PCsBo-3_EIC2DjqaeXRRK0GU2uBvuNskzfeisL-tYOpsvLcaAP8joGD2wokC6RQoW3-BGfWchbFXdfSNRP6vw7ybC4J1qUiNTzw9KnSVCduThq9lSrwWhLfCQGKlUJgdth9i52paZ9k9DQ1JSRxuW_OoY7V7qNMhp2HzhfQCOvbIFUtU2uzitkcaQcZRd7jGwLyXB9CPXEDkBokxYbusCETsVESmly3w=w461-h608-no\" alt=\"editor\">\n\n        \n</div>\n    \n  \n  <div id=\"content\">\n      <p>In the space provided, upload your document \n          & leave me a little comment\n          mentioning how you would like it reviewed. \n      </p>\n\n      <form action=\"https://formspree.io/kaylarobideau@gmail.com\" method=\"POST\">\n          <input type=\"text\" name=\"firstname\" placeholder=\"What's you're first name?\" size=\"100\" required>\n          <input type=\"text\" name=\"lastname\" placeholder=\"How about your last name?\" size=\"100\" required>\n          <input type=\"email\" name=\"_replyto\" placeholder=\"your.email@example.com\" required>\n          \n          <textarea name=\"user_message\" placeholder=\"What can I help you with?\" rows=\"8\" cols=\"40\"></textarea>\n          <label for=\"input_file_upload_id\">Please upload what the document you would like me to help with</label>\n          <input type=\"file\" id=\"input_file_upload_id\" name=\"data[]\">\n          <input type=\"submit\" value=\"Send\">\n        </form>\n</div>\n\n</section>\n";
+}
+},{}],"src/Screens/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _Home.default;
+  }
+});
+Object.defineProperty(exports, "Editorial", {
+  enumerable: true,
+  get: function () {
+    return _Editorial.default;
+  }
+});
+
+var _Home = _interopRequireDefault(require("./Home"));
+
+var _Editorial = _interopRequireDefault(require("./Editorial"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./Home":"src/Screens/Home.js","./Editorial":"src/Screens/Editorial.js"}],"src/Content.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Content;
+
+var Screens = _interopRequireWildcard(require("./Screens"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function Content(state) {
+  return "\n    <div id=\"content\">\n    <div class=\"container\">\n        ".concat(Screens[state.active](), "\n    </div>\n    </div>\n");
+}
+},{"./Screens":"src/Screens/index.js"}],"src/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -146,7 +196,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default(state) {
-  return "\n\n    <ul>\n    <li>\n        <i class=\"fab fa-instagram\">\n            <a href=\"https://www.instagram.com/semianonymouspoet/?hl=en\">Insta</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fas fa-at\">\n            <a href=\"\">Email</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fab fa-twitter\">\n            <a href=\"\">Twitter</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fas fa-bullseye\">\n            <a href=\"\">Purchase Here</a>\n        </i>\n\n    </li>\n</ul>\n    ";
+  return "\n<div id = \"footer\">\n    <ul>\n    <li>\n        <i class=\"fab fa-instagram\">\n            <a href=\"https://www.instagram.com/semianonymouspoet/?hl=en\">Insta</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fas fa-at\">\n            <a href=\"\">Email</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fab fa-twitter\">\n            <a href=\"\">Twitter</a>\n        </i>\n    </li>\n    <li>\n        <i class=\"fas fa-bullseye\">\n            <a href=\"\">Purchase Here</a>\n        </i>\n\n    </li>\n</ul>\n</div>\n    ";
 }
 },{}],"node_modules/navigo/lib/navigo.min.js":[function(require,module,exports) {
 var define;
@@ -172,20 +222,19 @@ var router = new _navigo.default(window.location.origin);
 var State = {
   'active': 'Home',
   'Home': {
-    'links': ['Insta', 'Email', 'Twitter', 'Purchase Here', 'aboutMe', 'Editorial']
+    'links': ['Creative Content', 'Editorial', 'Forum']
   },
   'aboutMe': {
-    'links': ['Insta', 'Email', 'Twitter', 'Purchase Here', 'Editorial']
+    'links': ['Creative Content', 'EDitorial', 'Forum']
   },
   'Editorial': {
-    'links': ['Insta', 'Email', 'Twitter', 'Purchase Here', 'aboutMe']
+    'links': ['Creative Content', 'Editorial', 'Forum']
   }
 };
 var root = document.querySelector('#root');
 
 function render(state) {
-  root.innerHTML = "\n        ".concat((0, _Navigation.default)(state), "\n        ").concat((0, _Header.default)(state), "\n        ").concat((0, _Content.default)(state), "\n        ").concat((0, _Footer.default)(state), "\n    ");
-  router.UpdatePageLinks();
+  root.innerHTML = "\n        ".concat((0, _Navigation.default)(state), "\n        ").concat((0, _Header.default)(state), "\n        ").concat((0, _Content.default)(state), "\n        ").concat((0, _Footer.default)(state), "\n    "); //router.UpdatePageLinks();
 }
 
 function handleNavigation(params) {
@@ -225,7 +274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58986" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52570" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
