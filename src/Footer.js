@@ -1,5 +1,7 @@
+import { html } from 'lit-html';
+
 export default function(state){
-    return`
+    return html`
 <div id = "footer">
     <ul>
     <li>

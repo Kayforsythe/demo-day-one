@@ -3,44 +3,57 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 import Navigo from 'navigo';
+import Store from './src/Store';
+import { html, render } from 'lit-html';
 
 var router = new Navigo(window.location.origin);
+
+var root = document.querySelector('#root');
 
 var State = {
     'active': 'Home',
     'Home': {
-        'links': [ 'Creative Content', 'Editorial', 'Forum' ]
+        'links': [ 'Creative Content', 'Editorial' ]
     },
-    'aboutMe': {
-        'links': [ 'Creative Content', 'EDitorial', 'Forum' ]
+    'Creative Content': {
+        'links': [ 'Home', 'EDitorial' ]
     },
     'Editorial': {
-        'links': [ 'Creative Content', 'Editorial', 'Forum' ]
+        'links': [ 'Home', 'Creative Content' ]
     },
 
 };
 
-var root = document.querySelector('#root');
+var store = new Store(State);
 
-function render(state){
-    root.innerHTML = `
+
+function handleNavigation(params){
+    state.dispath((state) => {
+        state.active = params.page;
+        
+        return state;
+    });
+} 
+
+
+function App(state){
+    return html `
         ${Navigation(state)}
         ${Header(state)}
         ${Content(state)}
         ${Footer(state)}
-    `;
-    
-    //router.UpdatePageLinks();
+    `;    
 }
 
-function handleNavigation(params){
-    State.active = params.page;
+function start(state){
+    render(App(state), root);
+}
 
-    render(State);
-} 
-
+store.addListener(start);
+store.addListener(() => router.UpdatePageLinks());
 
 router
-    .on('/:page', handleNavigation)
-    .on('/', () => handleNavigation({ 'page': 'Home' }))
-    .resolve();
+.on('/:page', handleNavigation)
+.on('/', () => handleNavigation({ 'page': 'Home' }))
+.resolve();
+

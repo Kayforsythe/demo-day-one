@@ -1,8 +1,8 @@
-html{
+/*html{
     height: 100vh;
     margin: 0;
     padding: 0;
-}
+}*/
 
 #root{
     display: grid;
@@ -36,14 +36,12 @@ a {
 
 #navigation li {
     font-size: 20px;
-    display: inline-flex;
     list-style: none;
 
 }
 
 #header{
     grid-area: header;
-    display: block;
 }
 
 #content {  
@@ -59,35 +57,33 @@ a {
     background-image: url("https://lh3.googleusercontent.com/Mc7Rl5AKNm8eR__yyjAqar8X4_ia1j5U3YV44aDuGya7Qyv4UZig8e96GyneG6qkhEb6zIO_qfrzvuGEvxsUobCfQF2LvFA-toatPSDf_Lh6baz8HrXOzGhXXpgUmfbATVbC8Qa-o91i_x6-7whpR7fEyzlwytBM7nsGkSbm-3nnXCyF5A6XUGuz4UDxUHJgXdx-a_qQbnkAcKPrRmwM-jOdStvPxq4tIkP8gE56b6XDXMUXhLTJNjnn235WOu0TzjZkJcZyq8lcAMTFycQHzzLcY2ERVos3ZdsZe7GhjvZLgZ0D80rUdvR3aAH9pjpFrPA2hWV1OywKFofwGCmJao4DDwBTaSlJnOjHz4pIRhyYlG_831IA_x7rBRO3APPre_AuI1iVAsSKgbRbzYRYnVypOo-rTQd6Tsk8tdBtt76q0gVual6lGHgpUAtd2y2mjUGqqtp2awloCQvBgRJw1cbhyX5bN-jVyHCHrwTC-uB-weVJ5SkRaneHFugSKXhApni5HNeeDWiLkDMWp6MvqzRau_6jZXnmcq3_aLLnF2f4aFfzsXQ9D9iDGf8ydur9xlCej2uzi3um-cd6TRZTmVvs8E7NDi_t7bjHY3-ZZYmArFIsibR2lPm309TMdIvoAxIP81Pp1kOq5hZbPEjYFbaH0Q=w533-h657-no");
 }
 
-#footer{
+#footer {
     grid-area: footer; 
-    position: fixed;
-    padding: 10px;
+    position: relative;
 }
 
 #footer ul {
-    text-align: right;
+    display: inline;
+    text-align: center;
+    list-style: none;
 }    
 #footer ul li {
     font-size: 20px;
-    display: inline-flex;
-    list-style: none;
+    
+}
+
+.tiltedBackground {
+    background: url(https://thepracticalhistorian.files.wordpress.com/2018/10/bookstack.jpg)
+    no-repeat center;
+    width: 100vh;
+    height: 100vh;
     
 }
 
 .intro {
     color:rgb(88, 42, 34);
     font-size: 20px;
-    letter-spacing: 1px;
-    margin: 10px;
-    
-}
-
-
-.pages ul{
-    display: inline;
-    list-style: none;
-
+    letter-spacing: 1px;    
 }
 
 .edit {
