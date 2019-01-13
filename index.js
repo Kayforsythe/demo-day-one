@@ -13,14 +13,14 @@ var root = document.querySelector('#root');
 var State = {
     'active': 'Home',
     'Home': {
-        'links': [ 'Creative Content', 'Editorial' ]
+        'links': [ 'CreativeContent', 'Editorial' ]
     },
-    'Creative Content': {
-        'links': [ 'Home', 'EDitorial' ]
+    'CreativeContent': {
+        'links': [ 'Home', 'Editorial' ]
     },
     'Editorial': {
-        'links': [ 'Home', 'Creative Content' ]
-    },
+        'links': [ 'Home', 'CreativeContent' ]
+    }
 
 };
 
@@ -28,7 +28,7 @@ var store = new Store(State);
 
 
 function handleNavigation(params){
-    state.dispath((state) => {
+    store.dispatch((state) => {
         state.active = params.page;
         
         return state;
@@ -37,23 +37,24 @@ function handleNavigation(params){
 
 
 function App(state){
-    return html `
-        ${Navigation(state)}
-        ${Header(state)}
-        ${Content(state)}
-        ${Footer(state)}
+    return html`
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
     `;    
 }
+
 
 function start(state){
     render(App(state), root);
 }
 
 store.addListener(start);
-store.addListener(() => router.UpdatePageLinks());
 
 router
-.on('/:page', handleNavigation)
-.on('/', () => handleNavigation({ 'page': 'Home' }))
-.resolve();
+    .on('/:page', handleNavigation)
+    .on('/', () => handleNavigation({ 'page': 'Home' }))
+    .resolve();
 
+router.updatePageLinks();

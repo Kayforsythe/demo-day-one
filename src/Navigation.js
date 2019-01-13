@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { capitalize } from 'lodash';
+
 
 function buildLink(link) {
         var href = '';
@@ -11,20 +11,21 @@ function buildLink(link) {
 return html `
 <li>
         <a href="/${href}" data-navigo>
-        ${capitalize(link)}
+        ${(link.replace(/([A-Z])/g, ' $1'))}
         </a>
 </li>
 `;
 }
 
 
-export default function Navigation(state){
-return `
+export default function Navigation(state) {
+return html`
 <div id="navigation">
  <ul class = "container">
-    ${state[state.active].links.map(buildLink).join('')}
-    
+ <li>
+${state[state.active].links.map(buildLink)} 
+  </li>
  </ul>
-</div>  
-`;
+ </div> 
+ `;
 }

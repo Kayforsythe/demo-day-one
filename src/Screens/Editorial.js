@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 
 export default function Editorial(state){
-return html `
+return html`
 
 <section class="edit">
 
@@ -19,7 +19,9 @@ return html `
           
           <textarea name="user_message" placeholder="What can I help you with?" rows="8" cols="40"></textarea>
           <label for="input_file_upload_id">Please upload what the document you would like me to help with</label>
-          <input type="file" id="input_file_upload_id" name="data[]">
+          
+          <input type="hidden" role="uploadcare-uploader" name="fileUpload" />
+
           <input type="submit" value="Send">
         </form>
 
