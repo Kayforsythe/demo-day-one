@@ -1,3 +1,9 @@
+html{
+    display:grid;
+    width:100vw;
+    height:100vh;
+}
+
 
 #root{
     display: grid;
@@ -22,12 +28,14 @@ a {
 
 #navigation{
     grid-area: navigation;
-    top: 0;
+    padding: 15px;
+    flex-direction: row;
       
 }
 
 #navigation ul{
-    align-items: flex-start;
+    display: inline-flex;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -46,12 +54,14 @@ a {
 
 #content {  
     grid-area: content;
+    padding: 0;
 }
 
 #footer {
     grid-area: footer; 
     display: inline;
     position: relative;
+    padding: 0;
 }
 
 #footer ul {
@@ -63,18 +73,7 @@ a {
     
 }
 
-@media (min-width: 750px) {
-    #root {
-        font-family: 'The Girl Next Door', cursive;
-        background-color: rgba(235, 199, 152, 0.774);
-        grid-template-columns: 15% auto;
-        grid-template-rows: min-content auto min-content;
-        grid-template-areas: 
-        "navigation header"  
-        "navigation content" 
-        "navigation footer";
-    }
-}
+ 
 
 .Poems{
     display: flex;
@@ -91,23 +90,16 @@ a {
 }
 
 .tiltedBackground {
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
+    width: 100vw;
+    height: 100vh;
     color:rgb(88, 42, 34);
     font-size: 20px;
     letter-spacing: 1px;
-}
-
-.tiltedBackground img{
-    width: 90%;
-    height: 70%;
-    float: left;
-}
-
-.contain{
-    object-fit: contain;
+    background: url('https://thepracticalhistorian.files.wordpress.com/2018/10/bookstack.jpg') no-repeat center;
+    padding-top: 10%;
+    padding-bottom: 0;
+    align-content: center;
 }
 
 
@@ -124,4 +116,18 @@ a {
     width:300px;
     height:450px;
     
+}
+
+@media (min-width: 500px) {
+    #root{
+    background-color: rgba(235, 199, 152, 0.774);
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas: 
+    "navigation header"
+    "navigation content"
+    "navigation footer";
+    }
+    #navigation > ul {
+        flex-direction: row;
+    }
 }

@@ -1760,7 +1760,7 @@ exports.default = _default;
 var _litHtml = require("lit-html");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n   <div id=\"header\">\n   </div>\n    "]);
+  var data = _taggedTemplateLiteral(["\n   <div id=\"header\">\n \n   </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1785,7 +1785,7 @@ exports.default = _default;
 var _litHtml = require("lit-html");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    \n    <div class=\"tiltedBackground\">\n    <p><h1>\"To write </p>\n    <p>is human,</h1></p>\n    <p><h1> to edit </p>\n    <p>is </p>\n    <p>devine\"</h1></p>\n    <p><h3>-Stephen King</h3></p>\n   \n    \n    <img src=\"https://thepracticalhistorian.files.wordpress.com/2018/10/bookstack.jpg\" alt=\"books\" class=\"contain\">\n    </div>\n    "]);
+  var data = _taggedTemplateLiteral(["\n    \n    <div class=\"tiltedBackground\">\n    <h2>\"To write is human, to edit is devine\"</h2>\n    <h3>-Stephen King</h3>\n    </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2082,7 +2082,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64138" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51919" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
