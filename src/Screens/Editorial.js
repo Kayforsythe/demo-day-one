@@ -2,28 +2,84 @@ import { html } from 'lit-html';
 
 export default function Editorial(state){
 return html`
-<div class="intro">
-<img src="https://lh3.googleusercontent.com/yb5F5Jb1boFa013ZLSB-q3qg9GBg83g3291vrCT6hgerUn8EwivgP0U7ZdoBSoHpvCpFdIhY7eRwPREynWRPGM3nyUqDliV_sDOxwys0RFzzV1QCJqbw9c9IYnsySmy1eQqV7MNVjCPYLCd3kd9-ZP6B0SpaDO8bWPxuH43G1Liqaq6_n2st5VsFdkPhf0GEhVwCcDAfbSVB6QtIiWKbJAR54B6t0I6ZzUBdnPTSraH7z7J8jrAu-_iQ7B7LczwR5mi9dBToBwgo3hxSOvrWLjg336z6hl6OxsB2Dc3aM441nGjcOMnfKCnKENOC0KyS2iWl1NhQLe2t37KboEnK0KhU6Jt_KB1wVJj-RVbnqQ55VcZpiEAimNnmAGqfksLjKt7ln_A_xQrvtzzOshUgVcFoCymIXv-2CS-u_q28oKzdEuNqvEbs9MKT63PCsBo-3_EIC2DjqaeXRRK0GU2uBvuNskzfeisL-tYOpsvLcaAP8joGD2wokC6RQoW3-BGfWchbFXdfSNRP6vw7ybC4J1qUiNTzw9KnSVCduThq9lSrwWhLfCQGKlUJgdth9i52paZ9k9DQ1JSRxuW_OoY7V7qNMhp2HzhfQCOvbIFUtU2uzitkcaQcZRd7jGwLyXB9CPXEDkBokxYbusCETsVESmly3w=w461-h608-no" alt="editor">
-</div>
-
 <div class="edit">
-      <p>In the space provided, upload your document 
-          & leave me a little comment
-          mentioning how you would like it reviewed. 
-      </p>
 
-      <form action="https://formspree.io/kaylarobideau@gmail.com" method="POST">
-          <input type="text" name="firstname" placeholder="What's you're first name?" size="100" required>
-          <input type="text" name="lastname" placeholder="How about your last name?" size="100" required>
-          <input type="email" name="_replyto" placeholder="your.email@example.com" required>
-          
-          <textarea name="user_message" placeholder="What can I help you with?" rows="8" cols="40"></textarea>
-          <label for="input_file_upload_id">Please upload what the document you would like me to help with</label>
-          
-          <input type="hidden" role="uploadcare-uploader" name="fileUpload" />
 
-          <input type="submit" value="Send">
-        </form>
+<iframe
+id="JotFormIFrame-90155625340148"
+onload="window.parent.scrollTo(0,0)"
+allowtransparency="true"
+allowfullscreen="true"
+allow="geolocation; microphone; camera"
+src="https://form.jotform.com/90155625340148"
+frameborder="0"
+style="width: 1px;
+min-width: 100%;
+height:539px;
+border:none;"
+scrolling="no"
+>
+</iframe>
+<script type="text/javascript">
+var ifr = document.getElementById("JotFormIFrame-90155625340148");
+if(window.location.href && window.location.href.indexOf("?") > -1) {
+  var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
+  if(ifr && get.length > 0) {
+    var src = ifr.src;
+    src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
+    ifr.src = src;
+  }
+}
+window.handleIFrameMessage = function(e) {
+  if (typeof e.data === 'object') { return; }
+  var args = e.data.split(":");
+  if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+  if (!iframe) { return; }
+  switch (args[0]) {
+    case "scrollIntoView":
+      iframe.scrollIntoView();
+      break;
+    case "setHeight":
+      iframe.style.height = args[1] + "px";
+      break;
+    case "collapseErrorPage":
+      if (iframe.clientHeight > window.innerHeight) {
+        iframe.style.height = window.innerHeight + "px";
+      }
+      break;
+    case "reloadPage":
+      window.location.reload();
+      break;
+    case "loadScript":
+      var src = args[1];
+      if (args.length > 3) {
+          src = args[1] + ':' + args[2];
+      }
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = 'text/javascript';
+      document.body.appendChild(script);
+      break;
+    case "exitFullscreen":
+      if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+      else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+      else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+      else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+      else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+      break;
+  }
+  var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+  if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+    var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+    iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+  }
+};
+if (window.addEventListener) {
+  window.addEventListener("message", handleIFrameMessage, false);
+} else if (window.attachEvent) {
+  window.attachEvent("onmessage", handleIFrameMessage);
+}
+</script>
 
 </div>
 `;

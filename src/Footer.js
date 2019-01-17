@@ -7,10 +7,13 @@ export default function(state){
     <li>
     Follow Me on 
         <i class="fab fa-instagram">
-            <a href="https://www.instagram.com/semianonymouspoet/?hl=en">Instagram</a>
+            <a href="https://www.instagram.com/semianonymouspoet/?hl=en" target="_blank">Instagram</a>
         </i>
     </li>
-</ul>
+    <li>
+    <a href="https://github.com/Kayforsythe/demo-day-one" target="_blank"><i class="fab fa-github"></i></a>
+    </li>
+ </ul>
 </div>
     `;
 }

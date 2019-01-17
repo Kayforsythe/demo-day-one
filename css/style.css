@@ -28,22 +28,19 @@ a {
 
 #navigation{
     grid-area: navigation;
-    padding: 15px;
-    flex-direction: row;
-      
+    
+    
 }
 
 #navigation ul{
-    display: inline-flex;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
 }
 
 #navigation ul li {
     display: inline;
-    font-size: 20px;
+    font-size: 30px;
     list-style: none;
 
 }
@@ -51,6 +48,22 @@ a {
 #header{
     grid-area: header;
 }
+
+
+/*@media (min-width: 700px) {
+    #root{
+    background-color: rgba(235, 199, 152, 0.774);
+    grid-template-columns: 15% auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas: 
+    "navigation header"
+    "navigation content"
+    "navigation footer";
+    }
+    #navigation > ul {
+        flex-direction: row;
+    }
+}*/
 
 #content {  
     grid-area: content;
@@ -69,7 +82,7 @@ a {
     list-style: none;
 }    
 #footer ul li {
-    font-size: 20px;
+    font-size: 30px;
     
 }
 
@@ -90,7 +103,7 @@ a {
 }
 
 .tiltedBackground {
-    flex-direction: row;
+    flex-flow: row nowrap;
     width: 100vw;
     height: 100vh;
     color:rgb(88, 42, 34);
@@ -109,25 +122,3 @@ a {
     color: rgb(88, 42, 34);
 }
 
-.intro{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:300px;
-    height:450px;
-    
-}
-
-@media (min-width: 500px) {
-    #root{
-    background-color: rgba(235, 199, 152, 0.774);
-    grid-template-rows: min-content min-content min-content;
-    grid-template-areas: 
-    "navigation header"
-    "navigation content"
-    "navigation footer";
-    }
-    #navigation > ul {
-        flex-direction: row;
-    }
-}
