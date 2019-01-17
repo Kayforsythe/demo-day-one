@@ -2,9 +2,25 @@ import { html } from 'lit-html';
 
 export default function CreativeContent(state){
     return html`
-<div class = "Poems">
+    
+<div class = "aboutAuthor">
+<img src="https://lh3.googleusercontent.com/k8p6PG-We9aMIb7LHvYKahHnMjRReQKZbF7qDuMiLp3hHErZfTM-2JwL4rxj95EfosMFxV_87GlFVMwMu9Hxx1CrYT_fy20GXf7orBtgLbnKkJZmLPW3fGbsfeI3DU3wOcTy4r-Nmkha4_N3eqEfB9MDTDoVQWQU-TUGIsnBE3g1reXnVWTfy1VaDU4kgHFDzAmWjDij15DpyInSqH8KFBmTd9TKkZPOz0pllhXe4hrFdprvs-QTg5gucPf44lYpVHZTQvnJG3pTtSG277QoXNP_kNB_H_FnwuOswFJRubryrZ5gBbqszXIIwzoN9rY33GCNJoeN-6VZi8MQG5EV2aEGJZCQNtIRRgdyiqTPMNKcCXu6r5yq6PsnGW1PMcysQC74sp_2F1AhClt3JYMd3ED5c5SBUyvyLrU9C778UaWFVgqu2yqBHbywFXE6QBkbNhA0n9y2qZfTkcTts28atftX3sI7x1qd2FpLKmU-yTKTh0U6wdRZeEcYbqx9umXBA9VyN6U3Z9nRy0-U0D5jNhxi7BFMIvOggTNMW_oK_nr4oAA1VApKuYwta6a-AJKBkt_d3cM_Yn38cyj-ate44M1aDtv04lVtCnMjj3E6x-qK6zEla-O8MC57v__ujWrhP7iood9JNoDb1vSa8_MBsrrpaw=w497-h400-no" 
+    alt="Author" class="contain">
+    
+<h1>Jessica Gaeng</h1>
+<h3>Author | Poet | Old Soul</h3>
+<h3>Aspiring Novelist | Connoisseur of Words</h3>
 
-<h2>Coming soon...</h2>
+<p>Looking for more poetry? Stay tuned for more excerpts and releases from my new book</p><h2> Raw.</h2>
+<p>Along with other creative content pre- and post published.</p>
+    
+    
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=books%2C%20coffee%2C%20coffee%20shop%2C&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pure black</a></div><style>.mapouter{text-align:right;height:300px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;}</style></div>
+    
+</div>
+
+<div class = "Poems">
+<h2>Raw</h2> <h3>Sneak Peak...</h3>
 
 <img src="https://lh3.googleusercontent.com/-4HvfY-MRsyvppurwxQTMxDxNtP8nyrlbUV8ePxOjukiX-zFbQP8Sr3doHrzSdPHYVDRWjEjJENAFbKdUL7nTQXIpmgz2LU728gFokLGktMmVIRd41M6dkcn_Bp21PvzWurq7NkMws9-cPh0zCByX4_Dwpf7qWt_xytQMIlF0vBf7pDGfLIhhxB7PidC8_mBerSf0UaImMLJ4AJlS25MR7DUeQL98XHW8vt8sckAFG9pIdMGgGbGpuTTFN00K8GDtt3z9tiw4WUfdxKI6izwPH53frwZ6OGA8ZmlZ8AOCthKW_7yvPKTkwWuVRW48gb6Nee59ilv_OPWV6xNxzzt-bjhQ3Ya5QHkasMQcue5NB8JyZjKfhimK6ikezKrLdrxpVzP73LH6A3nhQukEDBEz8wH33osgx9ITOoZDFKjvGJEqpx1QBfz2LF3xXJxGVUj7cdSZx7TaNtw3uQ0KKbyPj5y0kxRAnuRixT8hrSJY4WgpCHPg9zh9dkh5Za5O7x8PsUAI5TvAg2vJ5ANoIAigPAFQLz2t8E5yAUWEAuHDJCfSEjFt3jJLfLkFsHTgxpemHJv5t4TytYmo0daZTC5uR7rGh9eyJJpy30gxzx3YORNPFfZH6h1lvum6DtKfuBCCicQV7Bq8nG-vzkdCiip5b3vwQ=w661-h657-no" alt="poemOne">
  
