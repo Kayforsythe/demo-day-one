@@ -104,6 +104,44 @@ a {
     font-style: italic;
 }
 
+.wrapper{
+    /* height set to full view height */
+    height: 100vh;
+    /* disable horizontal scroll */
+    overflow-x:hidden;
+    /* enable scrolling on page*/
+    overflow-y: auto;
+    /* set perspective to 2px. distance from the vp to transformed objects*/
+    perspective: 2px;
+}
+
+.section{
+    position: relative;
+    height: 100vh;
+
+    /* text formatting*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax::after{
+    /*display & position the pseudo- element*/
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static{
+    background:rgb(88, 42, 34);
+}
+
 .tiltedBackground {
     flex-flow: row nowrap;
     width: 100vw;
