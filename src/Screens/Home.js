@@ -6,8 +6,3 @@ export default function(state){
     </div>
     `;
 }
-
-   /* <div class="quote">
-        <h2>"To write is human, to edit is devine"</h2>
-        <h3>-Stephen King</h3>
-    </div> */
