@@ -2,8 +2,7 @@ import { html } from 'lit-html';
 
 export default function CreativeContent(state){
     return html`
-<main class="wrapper">
-<div class="info">    
+<div id="info">    
     <div class = "aboutAuthor">
         <img src="https://lh3.googleusercontent.com/k8p6PG-We9aMIb7LHvYKahHnMjRReQKZbF7qDuMiLp3hHErZfTM-2JwL4rxj95EfosMFxV_87GlFVMwMu9Hxx1CrYT_fy20GXf7orBtgLbnKkJZmLPW3fGbsfeI3DU3wOcTy4r-Nmkha4_N3eqEfB9MDTDoVQWQU-TUGIsnBE3g1reXnVWTfy1VaDU4kgHFDzAmWjDij15DpyInSqH8KFBmTd9TKkZPOz0pllhXe4hrFdprvs-QTg5gucPf44lYpVHZTQvnJG3pTtSG277QoXNP_kNB_H_FnwuOswFJRubryrZ5gBbqszXIIwzoN9rY33GCNJoeN-6VZi8MQG5EV2aEGJZCQNtIRRgdyiqTPMNKcCXu6r5yq6PsnGW1PMcysQC74sp_2F1AhClt3JYMd3ED5c5SBUyvyLrU9C778UaWFVgqu2yqBHbywFXE6QBkbNhA0n9y2qZfTkcTts28atftX3sI7x1qd2FpLKmU-yTKTh0U6wdRZeEcYbqx9umXBA9VyN6U3Z9nRy0-U0D5jNhxi7BFMIvOggTNMW_oK_nr4oAA1VApKuYwta6a-AJKBkt_d3cM_Yn38cyj-ate44M1aDtv04lVtCnMjj3E6x-qK6zEla-O8MC57v__ujWrhP7iood9JNoDb1vSa8_MBsrrpaw=w497-h400-no" 
             alt="Author" class="contain">
@@ -23,30 +22,21 @@ export default function CreativeContent(state){
 
 </div>
 
-<div class = "Poems">
+<div id="Poems" class="slide">
 <h2>Raw</h2> <h3>Take a Peek...</h3>
 
+</div>
 
+<div id="p1" class="slide">
+</div>
 
-<section class="section parallax p1">
-</section>
+<div id="p2" class="slide">
+</div>
 
-<section class="static"></section>
+<div id="p3" class="slide">
+</div>
 
-<section class="section parallax p2">
-</section>
-
-<section class="static"></section>
-
-<section class="section parallax p3">
-</section>
-
-<section class="static"></section>
-
-<section class="section parallax p4">    
-</section>
-
-</main>
+<div id="p4" class="slide">
 </div>
 `;
 }
