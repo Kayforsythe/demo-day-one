@@ -131,6 +131,7 @@ a {
 
 .first{
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
@@ -138,6 +139,7 @@ a {
 
 .second{
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
