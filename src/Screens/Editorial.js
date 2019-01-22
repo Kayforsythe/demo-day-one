@@ -2,8 +2,17 @@ import { html } from 'lit-html';
 
 export default function Editorial(state){
 return html`
-<div class="edit">
+<div class="service">
+<h2>Struggling with your words?</h2>
+<h2>I can help with that!</h2>
+<h2>Contact me below!</h2>
+<p>Services offered:</p>
+<p>Copy Editing | Grammar | Structure | Constructive Peer Review</p>
+<p>Other services may be fulfilled per request</p>
+</div>
 
+
+<div class="edit">
 
 <iframe
 id="JotFormIFrame-90155625340148"
@@ -14,7 +23,7 @@ allow="geolocation; microphone; camera"
 src="https://form.jotform.com/90155625340148"
 frameborder="0"
 style="width: 1px;
-min-width: 100%;
+min-width: 90%;
 height:539px;
 border:none;"
 scrolling="no"

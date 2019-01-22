@@ -1,5 +1,6 @@
 html{
     height: 100%;
+    width: 100vw;
 }
 
 
@@ -14,6 +15,7 @@ html{
     margin: 0;
     padding: 0;
     min-height: 100%;
+    min-width: 100%;
     font-family: 'The Girl Next Door', cursive;
     background-color: rgba(235, 199, 152, 0.774);
 }
@@ -51,7 +53,7 @@ a {
 @media (min-width: 700px) {
     #root{
     background-color: rgba(235, 199, 152, 0.774);
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: min-content min-content auto min-content;
     grid-template-areas: 
     "navigation"
     "header"
@@ -71,6 +73,7 @@ a {
 #footer {
     grid-area: footer; 
     display: inline;
+    padding: 0;
 }
 
 #footer ul {
@@ -84,18 +87,46 @@ a {
     
 }
 
+#Creative{
+    width: 100vw;
+    height: 100vh;
+}
+
+
 #info{
     color: rgb(88, 42, 34);
     border: 1px solid black;
     padding: 10px;
 }
 #coffee{
+    display:flex;
     position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    color:rgb(88, 42, 34);
+    padding: 10px;
+}
+.mapouter{
+    position: sticky;
 }
 
+
+#coffee h2{
+    text-align: center;
+    align-content: space-around;
+}
+
+
 #Poems{
-    border: 1px solid black;
-    position: relative;    
+    border: 1px solid black;  
+    text-align: center;  
+    color:rgb(88, 42, 34);
+   
+}
+
+
+.peek h1{
+    font-style: italic;
 }
 
 .first{
@@ -114,10 +145,9 @@ a {
 
 
 .exerpts{
-    width: 400px;
-    height: 500px;
+    width: 440px;
+    height: 475px;
 }
-
 
 
 #Poems h2{
@@ -126,24 +156,28 @@ a {
 
 
 .tiltedBackground {
-    flex-flow: row nowrap;
     width: 100vw;
     height: 100vh;
     color:rgb(88, 42, 34);
-    font-size: 20px;
-    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
     background: url('https://thepracticalhistorian.files.wordpress.com/2018/10/bookstack.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    align-content: center;
 }
 
 
 
-.edit {
-    align-items: center;
+.service{
     color: rgb(88, 42, 34);
+    display: block;
+    text-align: center;
+}
+
+.edit {
+    text-align: center;
+    
 }
 
 .contain{
